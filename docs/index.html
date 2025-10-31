@@ -4,70 +4,63 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>頭城停車場自治條例｜版本對照與修正草案</title>
-  <meta name="description" content="頭城鎮公有停車場自治條例：縣級與鄉鎮比較、修法歷程、下載與固定QR。">
-  <link rel="stylesheet" href="./css/style.css?v=2025-10-31">
+  <link rel="stylesheet" href="./css/style.css?v=20251031">
+  <meta name="description" content="頭城鎮公有停車場自治條例修正比較、縣級與鄉鎮對照、代表會審議素材與更新節點。">
 </head>
 <body>
   <header>
     <h1>頭城停車場自治條例｜版本對照與修正草案</h1>
-    <p class="small">更新日期：2025-10-31 · 本頁為公開資訊節點（非縣府官方網站）。</p>
+    <p class="small">本頁整合一頁式比較、A3 全縣對照、逐條修正（Google Docs 相容）等文件。更新日期：2025-10-31</p>
   </header>
   <main>
     <div class="card grid">
       <div>
-        <h2>📄 最新版下載（固定連結）</h2>
+        <h2>📄 下載文件</h2>
         <ul class="files">
-          <li><a href="./files/latest/policy-brief.pdf" target="_blank" rel="noopener">一頁式政策摘要（policy-brief.pdf）</a></li>
-          <li><a href="./files/latest/compare-A3.pdf" target="_blank" rel="noopener">全縣/鄉鎮對照（compare-A3.pdf）</a></li>
-          <li><a href="./files/latest/article-by-article.pdf" target="_blank" rel="noopener">逐條修正理由書（article-by-article.pdf）</a></li>
+          <li><a href="./files/20251031蔡財丁-頭城鎮公有停車場管理自治條例與宜蘭縣及主要相關鄉鎮比較3.pdf" target="_blank" rel="noopener">20251031蔡財丁-頭城鎮公有停車場管理自治條例與宜蘭縣及主要相關鄉鎮比較3.pdf</a></li>
         </ul>
-        <p class="small">* 請將對應 PDF 覆蓋於 <code>docs/files/latest/</code>，網址與 QR 不變。</p>
       </div>
       <div>
-        <h2>📱 QR Code（固定網址）</h2>
+        <h2>📱 最新版 QR Code（固定網址）</h2>
         <div class="qr">
           <div id="qrcode"></div>
           <div class="small">
-            建議把這個 QR 放到一頁式 PDF 右下角，印刷尺寸 2.5–3cm。<br>
-            這個 QR 會指向本頁固定網址，您每次只需更新 <code>/files/latest/</code> 的檔案。
+            將此 QR 放到一頁式 PDF 右下角。<br>
+            建議印刷尺寸：2.5–3 cm。<br>
+            目標連結：本頁固定網址（GitHub Pages）。
           </div>
         </div>
       </div>
     </div>
 
     <div class="card">
-      <h2>📚 導覽</h2>
-      <ul class="files">
-        <li><a href="../regulations/" target="_blank">法規正文庫（縣與各鄉鎮）</a></li>
-        <li><a href="../lawmaking-process/2025-11/" target="_blank">制法與修法歷程（2025-11卷）</a></li>
-        <li><a href="../references/" target="_blank">參考與附件（契約、標竿、媒體）</a></li>
-        <li><a href="../datasets/" target="_blank">資料集（費率、場站 GIS）</a></li>
-      </ul>
-    </div>
-
-    <div class="card">
       <h2>ℹ️ 使用說明</h2>
       <ol>
-        <li>把文件（PDF）放在 <code>docs/files/latest/</code>，並維持檔名：<code>policy-brief.pdf</code>、<code>compare-A3.pdf</code>、<code>article-by-article.pdf</code>。</li>
-        <li>若要公開歷史版本，請放在 <code>docs/files/briefs/</code> 與 <code>docs/files/compare/</code>，並在 README 註記。</li>
-        <li>本頁 QR 會自動指向本頁固定網址；如需指向某個特定 PDF，請改寫下方 <code>targetUrl</code> 變數。</li>
+        <li>把本資料夾內容整包上傳到 GitHub repo 根目錄（或 /docs），並啟用 Pages。</li>
+        <li>未來只要替換 <code>/files</code> 裡的檔案，QR Code 指向的固定網址不變。</li>
+        <li>若要固定導向特定 PDF，請改寫下方程式中的 <code>targetUrl</code>。</li>
       </ol>
       <details>
-        <summary>進階：QR 指定某份 PDF</summary>
-        <pre><code>const targetUrl = location.origin + location.pathname.replace(/index.html?$/, '') + 'files/latest/policy-brief.pdf';</code></pre>
+        <summary>進階：指定 QR 指向特定 PDF</summary>
+        <pre><code>const targetUrl = location.origin + location.pathname.replace(/index.html?$/, '') + 'files/20251031蔡財丁-頭城鎮公有停車場管理自治條例與宜蘭縣及主要相關鄉鎮比較3.pdf';</code></pre>
       </details>
     </div>
   </main>
   <footer>
-    <span>© TCAID / 頭圍拓值 · 授權：CC BY 4.0（除另有標示之政府公文影本）。</span>
+    <span>© TCAID / 頭圍拓值 · 本頁為政策資訊節點（非縣府官方網站）。</span>
   </footer>
 
+  <!-- 使用 qrcode.js 產生動態 QR，預設指向本站首頁固定網址 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-Mn0fQ5Zt2O6wsq2oV4m5Hq+3Y6GkWqgkV8Xb1qQ+4kqv0ZJ1jE6E6ZxS8uQdU4mQ1H2qE5U0K1mYQ2V+5o8lgA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
-    // 預設：QR 指向本站固定頁面（不必更換 QR）
+    // 1) 預設：QR 指向本站固定頁面（適合不想常換 QR 的情境）
     const base = location.origin + location.pathname.replace(/index.html?$/, '');
-    let targetUrl = base;
-    new QRCode(document.getElementById("qrcode"), { text: targetUrl, width: 160, height: 160 });
+    let targetUrl = base; // 如需鎖定某 PDF，請改為上方進階示例
+
+    // 2) 產生 QR
+    new QRCode(document.getElementById("qrcode"), { text: targetUrl, width: 150, height: 150 });
+
+    // 3) 如果站點是 repo 子路徑（如 ...github.io/repo/），上述 base 自動包含 /repo/，可直接使用。
   </script>
 </body>
 </html>
